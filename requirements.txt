@@ -1,6 +1,4 @@
 Django==1.4.3
 dj-database-url==0.2.1
-pyodbc==3.0.6
-sql-server.pyodbc==1.0
 virtualenv==1.8.4
 wadofstuff-django-serializers==1.1.0
