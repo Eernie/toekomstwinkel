@@ -6,7 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'toekomstwinkel.views.home', name='home'),
+    url(r'^$', 'API.views.home', name='home'),
+    url(r'^api/', include('API.urls')),
     # url(r'^toekomstwinkel/', include('toekomstwinkel.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
