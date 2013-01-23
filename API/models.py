@@ -14,7 +14,7 @@ class GroceryList(models.Model):
     id = models.AutoField(primary_key=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    products = models.ManyToManyField(Product, trough="GroceryList_Product")
+    products = models.ManyToManyField(Product, through="GroceryList_Product")
 
 class GroceryList_Product(models.Model):
     product = models.foreignKey(Product)
