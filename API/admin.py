@@ -3,7 +3,7 @@ from API.models import GroceryList, Product, GroceryList_Product
 
 class GroceryList_ProductInline(admin.TabularInline):
     model = GroceryList_Product
-    extra = 1
+    extra = 0
 
 class ProductInline(admin.TabularInline):
 	inlines = (GroceryList_ProductInline,)
