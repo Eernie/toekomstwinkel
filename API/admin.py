@@ -11,5 +11,6 @@ class ProductInline(admin.TabularInline):
 class GroceryListInline(admin.TabularInline):
 	inlines = (GroceryList_ProductInline,)
 
-admin.site.register(Product, ProductInline)
+
 admin.site.register(GroceryList, GroceryListInline)
+admin.site.register(Product, ProductInline)
