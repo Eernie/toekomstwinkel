@@ -17,6 +17,6 @@ class GroceryList(models.Model):
     products = models.ManyToManyField(Product, through="GroceryList_Product")
 
 class GroceryList_Product(models.Model):
-    product = models.foreignKey(Product)
-    grocerylist = models.foreignKey(GroceryList)
+    product = models.ForeignKey(Product)
+    grocerylist = models.ForeignKey(GroceryList)
     amount = models.PositiveIntegerField();
