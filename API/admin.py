@@ -6,10 +6,10 @@ class GroceryList_ProductInline(admin.TabularInline):
     extra = 0
 
 class ProductInline(admin.TabularInline):
-	inlines = (GroceryList_ProductInline,)
+	inlines = [GroceryList_ProductInline]
 
 class GroceryListInline(admin.TabularInline):
-	inlines = (GroceryList_ProductInline,)
+	inlines = [GroceryList_ProductInline]
 
 
 admin.site.register(GroceryList, GroceryListInline)
