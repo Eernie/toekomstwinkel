@@ -1,6 +1,15 @@
 from django.contrib import admin
-from API.models import GroceryList, Product
+from API.models import GroceryList, Product, GroceryList_Product
 
+class GroceryList_ProductInline(admin.TabularInline):
+    model = GroceryList_Product
+    extra = 1
 
-admin.site.register(Product)
-admin.site.register(GroceryList)
+class ProductInline(admin.TabularInline):
+	inlines = (GroceryList_ProductInline,)
+
+class GroceryListInline(admin.TabularInline):
+	inlines = (GroceryList_ProductInline,)
+
+admin.site.register(Product, ProductInline)
+admin.site.register(GroceryList, GroceryListInline)
