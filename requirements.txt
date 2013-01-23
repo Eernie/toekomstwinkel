@@ -3,3 +3,4 @@ distribute==0.6.31
 dj-database-url==0.2.1
 psycopg2
 wadofstuff-django-serializers==1.1.0
+south
