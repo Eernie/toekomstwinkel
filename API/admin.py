@@ -5,10 +5,10 @@ class GroceryList_ProductInline(admin.TabularInline):
     model = GroceryList_Product
     extra = 0
 
-class ProductInline(admin.TabularInline):
+class ProductInline(admin.ModelAdmin):
 	inlines = [GroceryList_ProductInline]
 
-class GroceryListInline(admin.TabularInline):
+class GroceryListInline(admin.ModelAdmin):
 	inlines = [GroceryList_ProductInline]
 
 
