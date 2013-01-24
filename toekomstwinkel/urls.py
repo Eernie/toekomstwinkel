@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'frontend.views.home'),
     url(r'^cart/$', 'frontend.views.cart'),
+    url(r'^cart/(?P<prodid>\d+)$', 'frontend.views.addtocart'),
+    url(r'^clear/$', 'frontend.views.clear'),
     url(r'^api/', include('API.urls')),
     # url(r'^toekomstwinkel/', include('toekomstwinkel.foo.urls')),
 

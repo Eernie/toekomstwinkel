@@ -1,8 +1,18 @@
-llaaa
-
-{{grocerylist.id}}
-
-{% for row in grocerylist.grocerylist_product_set.all %}
-  {{row.product.name}}
-  {{row.amount}}
-{% endfor %}
+<div class="row-fluid">
+  <div class="row4">
+    <table class="table table-bordered table-striped">
+      <caption><h3>Grocerylist Code: {{grocerylist.id}} <a href="/clear/" class="btn">clear!</a></h3></caption>
+      <thead>
+        <tr>
+          <th>Product name</th><th>qty</th><th>Price</th>
+      </thead>
+      <tbody>
+        {% for row in grocerylist.grocerylist_product_set.all %}
+          <tr>
+            <td>{{row.product.name}}</td><td>{{row.amount}}</td><td>&euro; {{row.product.price}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
