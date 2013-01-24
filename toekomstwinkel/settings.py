@@ -1,7 +1,7 @@
 # Django settings for toekomstwinkel project.
 import os
 
-if os.name == nt:
+if os.name == 'nt':
     SITE_ROOT = os.environ['SITE_ROOT']
 
 DEBUG = True
