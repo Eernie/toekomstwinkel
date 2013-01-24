@@ -1,0 +1,8 @@
+llaaa
+
+{{grocerylist.id}}
+
+{% for row in grocerylist.grocerylist_product_set.all %}
+  {{row.product.name}}
+  {{row.amount}}
+{% endfor %}

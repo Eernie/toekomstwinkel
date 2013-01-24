@@ -6,7 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'API.views.home', name='home'),
+    url(r'^$', 'frontend.views.home'),
+    url(r'^cart/$', 'frontend.views.cart'),
     url(r'^api/', include('API.urls')),
     # url(r'^toekomstwinkel/', include('toekomstwinkel.foo.urls')),
 
