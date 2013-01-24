@@ -1,7 +1,7 @@
 # Django settings for toekomstwinkel project.
 import os.path
 
-SITE_ROOT = os.path.dirname(__file__)
+SITE_ROOT = os.path.join(os.path.dirname(__file__),"..")
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
