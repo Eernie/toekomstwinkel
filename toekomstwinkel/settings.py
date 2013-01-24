@@ -1,8 +1,7 @@
 # Django settings for toekomstwinkel project.
-import os
+import os.path
 
-if os.name == 'nt':
-    SITE_ROOT = os.environ['SITE_ROOT']
+SITE_ROOT = os.path.dirname(__file__)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
