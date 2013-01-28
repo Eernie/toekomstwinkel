@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response, redirect
 from django.http import HttpResponse
 
 def home(request):
-  p = Product.objects.all()
+  p = Product.objects.all().order_by('name')
 
   return render_to_response('frontend/home.html', {'products':p})
 
