@@ -5,7 +5,7 @@ class Product(models.Model):
     EAN = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=6,decimal_places=2)
-    stock = models.PositiveIntegerField()
+    stock = models.IntegerField()
 
     def __unicode__(self):
         return self.name
