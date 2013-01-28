@@ -19,13 +19,13 @@
             <caption><h3>Add a product to your grocery list!</h3></caption>
             <thead>
               <tr>
-                <th>Product name</th><th>Price</th><th></th>
+                <th>Product name</th><th>Price</th><th>Stock</th><th></th>
               </tr>
             </thead>
             <tbody>
               {% for p in products %}
                 <tr>
-                  <td>{{p.name}}</td><td>&euro; {{p.price}}</td><td><a class="btn add" id="{{p.id}}" href="javascript:void(null)"><i class="icon-plus"></i></a></td>
+                  <td>{{p.name}}</td><td>&euro; {{p.price}}</td><td>{{p.stock}}</td><td><a class="btn add" id="{{p.id}}" href="javascript:void(null)"><i class="icon-plus"></i></a></td>
                 </tr>
               {% endfor %}
             </tbody>
